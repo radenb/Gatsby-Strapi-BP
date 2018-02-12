@@ -49,5 +49,5 @@ EXPOSE 28017
 # Then start Init Shell Script to initialize services
 ADD ./init.sh /usr/local/bin/init.sh
 RUN ["chmod", "+x", "/usr/local/bin/init.sh"]
-# ENTRYPOINT ["/usr/local/bin/init.sh"]
-CMD ["nginx", "-g", "daemon off"]
+ENTRYPOINT ["/usr/local/bin/init.sh"]
+# CMD ["nginx", "-g", "daemon off;"]
